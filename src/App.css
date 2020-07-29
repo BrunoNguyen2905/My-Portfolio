@@ -1,9 +1,15 @@
 body {
-  background: url(coffee-apple.jpg) no-repeat center center fixed;
-  -webkit-background: cover;
-  -moz-background: cover;
-  -o-background: cover;
-  background: cover;
+  background: url(https://cdn.hipwallpaper.com/m/2/19/0WGtwI.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  /* background: url(https://cdn.hipwallpaper.com/m/22/25/ipzSrb.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
 
   
 }

@@ -1,8 +1,9 @@
 import React from 'react';
-import {makeStyles, withStyles} from '@material-ui/core/styles';
-import {TextField, Typography, Button, Grid, Box} from '@material-ui/core';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { TextField, Typography, Button, Grid, Box } from '@material-ui/core';
 import SendIcon from "@material-ui/icons/Send";
 import Navbar from "./Navbar";
+import Footer from './Footer';
 
 
 const useStyles = makeStyles(theme => ({
@@ -39,8 +40,8 @@ const InputField = withStyles({ //uses the withStyles() higher-order component t
                 borderColor: 'tan'
             },
             "& .Mui-focused fieldset": {
-                color: 'tan' 
-             }   
+                color: 'tan'
+            }
         }
     }
 })(TextField);
@@ -53,41 +54,42 @@ const Contacts = () => {
             <Box component="div" className={classes.mainContainer}>
                 <Grid container justify="center">
                     <Box component="form" className={classes.form}>
-                        <Typography variant="h5" style={{color: 'tomato', textAlign: 'center', textTransform: 'uppercase'}}>
+                        <Typography variant="h5" style={{ color: 'tomato', textAlign: 'center', textTransform: 'uppercase' }}>
                             Hire or Contact me...
                         </Typography>
-                        <InputField 
-                            fullWidth={true} 
-                            label="Name" variant="outlined" 
-                            inputProps={{style:{color: 'white'}}} 
-                            margin="dense" 
+                        <InputField
+                            fullWidth={true}
+                            label="Name" variant="outlined"
+                            inputProps={{ style: { color: 'white' } }}
+                            margin="dense"
                             size="medium"
                         />
                         <br />
-                        <InputField 
-                            fullWidth={true} 
-                            label="Email" 
-                            variant="outlined" 
-                            inputProps={{style:{color: 'white'}}} 
-                            margin="dense" 
-                            size="medium"    
-                        />
-                        <br />
-                        <InputField 
-                            fullWidth={true} 
-                            label="Company name" 
+                        <InputField
+                            fullWidth={true}
+                            label="Email"
                             variant="outlined"
-                            inputProps={{style:{color: 'white'}}} 
-                            margin="dense" 
-                            size="medium"   
+                            inputProps={{ style: { color: 'white' } }}
+                            margin="dense"
+                            size="medium"
                         />
                         <br />
-                        <Button variant="outlined" fullWidth={true} endIcon={<SendIcon />} className={classes.button}> 
+                        <InputField
+                            fullWidth={true}
+                            label="Company name"
+                            variant="outlined"
+                            inputProps={{ style: { color: 'white' } }}
+                            margin="dense"
+                            size="medium"
+                        />
+                        <br />
+                        <Button variant="outlined" fullWidth={true} endIcon={<SendIcon />} className={classes.button}>
                             Contact Me
                         </Button>
                     </Box>
                 </Grid>
             </Box>
+            <Footer />
         </>
     );
 }

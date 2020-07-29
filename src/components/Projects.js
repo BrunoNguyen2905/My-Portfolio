@@ -23,11 +23,15 @@ const useStyles = makeStyles({
         background: '#233',
         height: '100%',
     },
+    heading: {
+        textAlign: 'center',
+        color: 'tomato'
+    },
     cardContainer: {
         maxWidth: 345,
         margin: '5rem auto'
-
     }
+
 });
 
 const Portfolio = () => {
@@ -35,6 +39,9 @@ const Portfolio = () => {
     return (
         <Box component="div" className={classes.mainCountainer}>
             <Navbar />
+            <Typography variant="h2" className={classes.heading}>
+                Recent Projects
+            </Typography>
             <Grid container justify="center" >
                 {/* Project 1 */}
                 <Grid item xs={12} sm={8} md={6}>

@@ -20,10 +20,12 @@ import {
     AssignmentInd,
     Home,
     Apps,
-    ContactMail
+    ContactMail,
+    Person,
+    Work
 } from '@material-ui/icons';
-import Footer from './Footer';
-import avatar from '../avatar.png';
+// import Footer from './Footer';
+import avatar from '../images/myPhoto.jpg';
 
 //CSS Styles
 const useStyles = makeStyles(theme => ({
@@ -51,14 +53,24 @@ const menuItems = [
         listPath: '/'
     },
     {
+        listIcon: <Work />,
+        listText: "Works",
+        listPath: '/working-experience'
+    },
+    {
         listIcon: <AssignmentInd />,
         listText: "Resume",
         listPath: '/resume'
     },
     {
         listIcon: <Apps />,
-        listText: "Portfolio",
-        listPath: '/portfolio'
+        listText: "Projects",
+        listPath: '/projects'
+    },
+    {
+        listIcon: <Person />,
+        listText: "About Me",
+        listPath: '/aboutMe'
     },
     {
         listIcon: <ContactMail />,
@@ -108,15 +120,16 @@ const Navbar = () => {
                             <ArrowBack style={{ color: "tomato" }} />
                         </IconButton>
                         <Typography variant="h5" style={{ color: 'tan' }}>
-                            Portfolio
+                            NHAN NGUYEN
                         </Typography>
                         <MobileRightMenuSlider
                             anchor="right"
                             open={state.right}
                             onClose={toggleSlider('right', false)}
+                            style={{justifyContent: 'center'}}
                         >
                             {sideList('right')}
-                            <Footer />
+                            {/* <Footer /> */}
                         </MobileRightMenuSlider>
                     </Toolbar>
                 </AppBar>
